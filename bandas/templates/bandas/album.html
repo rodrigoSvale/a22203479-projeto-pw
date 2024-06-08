@@ -1,0 +1,32 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+<body class = "album" ></body>
+    <h2>{{ album.titulo }}</h2>
+
+    <!-- METER CAPA AQUI -->
+    <p> Ano de lançamento: {{ album.ano }}</p>
+    {% if album.capa %}
+    <p> <img src = '{{album.capa.url}}' style="max-width: 30%;"></p>
+    {% else %}
+    <p>NO PHOTO</p>
+    {% endif %}
+
+    <h3>Músicas</h3>
+
+    {% for musica in musicas %}
+        <li>
+            <a href="{% url 'bandas:musica' musica.id %}">{{ musica.titulo }}, {{ musica.duracao }}</a>
+            {% if user.is_authenticated and perms.bandas.change_musica %}
+                <small><a href ="{% url 'bandas:edita_musica' musica.id %}">(Editar)</a></small>
+            {% endif %}
+            {% if musica.letra %}
+                <i class="fa-solid fa-microphone-lines"></i>
+            {% endif %}
+        </li>
+    {% endfor %}
+    {% if user.is_authenticated and perms.bandas.create_musica %}
+            <a href="{% url 'bandas:nova_musica' album.id %}"><button>Inserir nova Musica</button></a>
+    {% endif %}
+
+{% endblock %}

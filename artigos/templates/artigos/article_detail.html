@@ -1,0 +1,23 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ article.title }}</h1>
+    <p>Autor: {{ article.autor.user.username }}</p>
+    <p>Data Postada: {{ article.data_Postada }}</p>
+    <p>ultima modificacão: {{ article.ultima_modificacao }}</p>
+    <p>{{ article.corpo }}</p>
+    <h2>Comentarios</h2>
+    <ul>
+        {% for comment in comments %}
+        <li><a href="{% url 'artigos:comment-detail' comment_id=comment.id %}">comentario de {{ comment.author.username }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Ratings</h2>
+    <ul>
+        {% for rating in ratings %}
+        <li><a href="{% url 'artigos:rating-detail' rating_id=rating.id %}">Rating: {{ rating.score }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

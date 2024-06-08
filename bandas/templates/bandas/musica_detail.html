@@ -1,0 +1,23 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <header>
+        <a href="{% url 'bandas:index' %}">Menu</a> |
+        <a href="{% url 'bandas:album' album_id=musica.album.id %}">Voltar ao Álbum</a>
+    </header>
+
+    <h3>{{ musica.titulo }}</h3>
+    <p><strong>Álbum:</strong> {{ musica.album.titulo }}</p>
+    <p><strong>Duração:</strong> {{ musica.duracao }}</p>
+    <p><strong>Spotify:</strong> <a href="{{ musica.spotify_link }}" target="_blank">{{ musica.spotify_link }}</a></p>
+
+    {% if musica.letra %}
+        <h3>Letra:</h3>
+        <p class="letra">{{ musica.letra }}</p>
+    {% endif %}
+
+    {% if musica.biografia %}
+        <h3>Biografia:</h3>
+        <p class="biografia">{{ musica.biografia }}</p>
+    {% endif %}
+{% endblock %}

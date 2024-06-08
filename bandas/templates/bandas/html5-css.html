@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bandas/estilos.css' %}">
+</head>
+<body>
+    <h3>Seletores CSS</h3>
+    <p>Os seletores CSS são usados para selecionar elementos HTML com base em seus atributos, classes, IDs, etc. Abaixo está uma tabela que documenta os seletores que usamos nesta aplicação.</p>
+    <table>
+        <tr>
+            <th>Tipo de Seletor</th>
+            <th>Usado</th>
+            <th>Comentário</th>
+        </tr>
+        <tr>
+            <td>Classe</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar a <code>.header</code>, <code>.footer</code> e <code>.main-content</code>.</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar o <code>#nav</code>, <code>#sidebar</code> e <code>#footer</code>.</td>
+        </tr>
+        <tr>
+            <td>Atributo</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar <code>input[type="text"]</code>, <code>a[target="_blank"]</code> e <code>img[alt]</code>.</td>
+        </tr>
+        <tr>
+            <td>Pseudo-classe</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar diferentes estados de links como <code>a:link</code>, <code>a:visited</code>, <code>a:hover</code> e <code>a:active</code>.</td>
+        </tr>
+        <tr>
+            <td>Pseudo-elemento</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar <code>p::first-line</code>, <code>p::first-letter</code> e <code>a::before</code>.</td>
+        </tr>
+    </table>
+
+    <h3>Combinadores de Seletores</h3>
+    <p>Os combinadores de seletores são usados para selecionar elementos HTML com base em sua relação com outros elementos. Abaixo está uma tabela que documenta os combinadores que usamos nesta aplicação.</p>
+    <table>
+        <tr>
+            <th>Combinador</th>
+            <th>Usado</th>
+            <th>Comentário</th>
+        </tr>
+        <tr>
+            <td>Descendente</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar <code>.main-content p</code>.</td>
+        </tr>
+        <tr>
+            <td>Filho</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Usado para estilizar <code>.main-content > p</code>.</td>
+        </tr>
+        <tr>
+            <td>Adjacente</td>
+            <td><i class="fa fa-check"></i></td>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>tentativa.Teste</title>
+    </head>
+    <body>
+        <h1>Tentativa de teste</h1>
+        <p>Estou aqui</p>
+        <p>{% for a in aluno %}
+            {{ a.nome }} - {{ a.numero }}
+        {% endfor %}</p>
+        <p>{{ rodrigo }}</p>
+        <p>{% for nome in nomes %}
+            {{ nome }}
+        {% endfor %}
+        <a href ="{% url 'teste:outro' %}"> hiperlink </a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Portfolio/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80e2c93d53.js" crossorigin="anonymous"></script> <!-- Permissão para usar FontAwesome -->
+</head>
+<body>
+    <div class="grid-container">
+        <header class="hero">
+            <h3>Lusofona Web Development</h3>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'Portfolio:landing_page' %}">Home</a></li>
+                <li><a href="{% url 'Portfolio:about' %}">Sobre mim</a></li>
+                <li><a href="{% url 'Portfolio:aboutsite' %}">Sobre o site web</a></li>
+                <li><a href="{% url 'Portfolio:projetos' %}">projetos</a></li>
+                <li><a href="{% url 'Portfolio:contacto' %}">Contactos</a></li>
+                <li>
+                    <a href="{% url 'autenticacao:login' %}">
+                        <i class="fa-solid fa-user user-icon"></i>
+                    </a>
+                </li>
+                <li>
+                    <i id="dark-mode-toggle" class="fa-solid fa-moon"></i>
+                </li>
+                <li><div id="clock"></div></li>
+            </ul>
+        </nav>
+        <aside class="aside">
+            <div id="clock"></div>
+        </aside>
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>Rodrigo Silva Do Vale © 2024</p>
+        </footer>
+    </div>
+    <script src="{% static 'Portfolio/scripts.js' %}"></script>
+</body>
+</html>

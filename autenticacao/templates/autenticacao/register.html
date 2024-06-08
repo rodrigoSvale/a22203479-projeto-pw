@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    {% load static %}
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais do corpo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .register-wrapper {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            padding: 0.75rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .cancel-link {
+            margin-top: 1rem;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .cancel-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #777;
+        }
+        .register-link {
+            margin-top: 1rem;
+        }
+
+        .register-link a {
+            text-decoration: none;
+        }
+
+        .register-link button {
+            padding: 0.75rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-link button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-wrapper">
+        <header>
+            <h1>Registar</h1>
+        </header>
+
+        <main>
+            <form action="{% url 'autenticacao:register' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="O seu username..">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="nome" placeholder="O seu nome..">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="apelido" placeholder="O seu apelido..">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="O seu email..">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Defina a sua Palavra-chave..">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Criar">
+                </div>
+            </form>
+            <a href="{% url 'autenticacao:login' %}" class="cancel-link">Cancelar</a>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 RSV</p>
+        </footer>
+    </div>
+</body>
+</html>

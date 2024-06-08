@@ -1,0 +1,92 @@
+[
+    {
+        "titulo": "Night Visions",
+        "ano_lancamento": 2012,
+        "banda": "Imagine Dragons",
+        "musicas": [
+            {"titulo": "Radioactive", "duracao": "3:06", "spotify_link": "https://open.spotify.com/track/6i0V12jOa3mr6uu4WYhUBr"},
+            {"titulo": "Demons", "duracao": "2:57", "spotify_link": "https://open.spotify.com/track/7F5Zgnp2spUuuzKplmRkt7"}
+        ]
+    },
+    {
+        "titulo": "A Rush of Blood to the Head",
+        "ano_lancamento": 2002,
+        "banda": "Coldplay",
+        "musicas": [
+            {"titulo": "Clocks", "duracao": "5:07", "spotify_link": "https://open.spotify.com/track/0BCPKOYdS2jbQ8iyB56Zns"},
+            {"titulo": "The Scientist", "duracao": "5:09", "spotify_link": "https://open.spotify.com/track/75JFxkI2RXiU7L9VXzMkle"}
+        ]
+    },
+    {
+        "titulo": "Songs About Jane",
+        "ano_lancamento": 2002,
+        "banda": "Maroon 5",
+        "musicas": [
+            {"titulo": "She Will Be Loved", "duracao": "4:17", "spotify_link": "https://open.spotify.com/track/0c6xIDDpzE81m2q797ordA"},
+            {"titulo": "This Love", "duracao": "3:26", "spotify_link": "https://open.spotify.com/track/0HZhYMZOcUzZKSFwPOti4A"}
+        ]
+    },
+    {
+        "titulo": "AM",
+        "ano_lancamento": 2013,
+        "banda": "Arctic Monkeys",
+        "musicas": [
+            {"titulo": "Do I Wanna Know?", "duracao": "4:33", "spotify_link": "https://open.spotify.com/track/5FVd6KXrgO9B3JPmC8OPst"},
+            {"titulo": "R U Mine?", "duracao": "3:21", "spotify_link": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L"}
+        ]
+    },
+    {
+        "titulo": "Hot Fuss",
+        "ano_lancamento": 2004,
+        "banda": "The Killers",
+        "musicas": [
+            {"titulo": "Mr. Brightside", "duracao": "3:42", "spotify_link": "https://open.spotify.com/track/7a86XRg84dEwRrFMRHMDdM"},
+            {"titulo": "Somebody Told Me", "duracao": "3:17", "spotify_link": "https://open.spotify.com/track/0eGsygTp906u18L0Oimnem"}
+        ]
+    },
+    {
+        "titulo": "Paramore",
+        "ano_lancamento": 2013,
+        "banda": "Paramore",
+        "musicas": [
+            {"titulo": "Still Into You", "duracao": "3:36", "spotify_link": "https://open.spotify.com/track/7qxCtr0V3zj6BqGzBSP0cX"},
+            {"titulo": "Ain't It Fun", "duracao": "4:56", "spotify_link": "https://open.spotify.com/track/5RsKelNxszsWFFMa6C9yA7"}
+        ]
+    },
+    {
+        "titulo": "Sigh No More",
+        "ano_lancamento": 2009,
+        "banda": "Mumford & Sons",
+        "musicas": [
+            {"titulo": "Little Lion Man", "duracao": "4:06", "spotify_link": "https://open.spotify.com/track/2BBk27QT9t3zWxKclbVku4"},
+            {"titulo": "The Cave", "duracao": "3:37", "spotify_link": "https://open.spotify.com/track/2PyApfOrY6dI11zTND0yHd"}
+        ]
+    },
+    {
+        "titulo": "Blurryface",
+        "ano_lancamento": 2015,
+        "banda": "Twenty One Pilots",
+        "musicas": [
+            {"titulo": "Stressed Out", "duracao": "3:22", "spotify_link": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn"},
+            {"titulo": "Ride", "duracao": "3:34", "spotify_link": "https://open.spotify.com/track/2Z8WuEywRWYTKe1NybPQEW"}
+        ]
+    },
+    {
+        "titulo": "Death of a Bachelor",
+        "ano_lancamento": 2016,
+        "banda": "Panic! At The Disco",
+        "musicas": [
+            {"titulo": "Death of a Bachelor", "duracao": "3:23", "spotify_link": "https://open.spotify.com/track/3CVb8Z4Cy0rb8uH1X4zKzp"},
+            {"titulo": "Emperor's New Clothes", "duracao": "2:39", "spotify_link": "https://open.spotify.com/track/6K4t31amVTZDgR3sKmwUJJ"}
+        ]
+    },
+    {
+        "titulo": "Lungs",
+        "ano_lancamento": 2009,
+        "banda": "Florence and the Machine",
+        "musicas": [
+            {"titulo": "Dog Days Are Over", "duracao": "4:12", "spotify_link": "https://open.spotify.com/track/1YLJVmuzeM2YSUkCCaTNUB"},
+            {"titulo": "You've Got the Love", "duracao": "2:48", "spotify_link": "https://open.spotify.com/track/1BxgicB8ezWa4ARWDW8coj"}
+        ]
+    }
+]

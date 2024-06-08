@@ -1,0 +1,11 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Detalhes comentario</h1>
+    <p>Autor: <a href="{% url 'artigos:author-detail' author_id=comment.author.author.id %}">{{ comment.author.username }}</a></p>
+    <p>Conteudo: {{ comment.content }}</p>
+    <p>Artigo: <a href="{% url 'artigos:article-detail' article_id=comment.article.id %}">{{ comment.article.title }}</a></p>
+    <p>Data postada: {{ comment.date_posted }}</p>
+</div>
+{% endblock %}

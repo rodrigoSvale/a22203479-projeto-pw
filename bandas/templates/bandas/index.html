@@ -1,0 +1,14 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h1>Lista de bandas</h1>
+    <ul>
+    {% for banda in bandas %}
+        <li>
+            <a href="{% url 'bandas:banda' banda.id %}">{{ banda.nome }}</a> - {{ banda.nacionalidade }} - Formado em {{ banda.ano }}
+        </li>
+    {% empty %}
+        <li>Sem bandas disponiveis.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

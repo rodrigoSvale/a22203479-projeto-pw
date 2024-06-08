@@ -1,0 +1,13 @@
+{% extends 'bandas/layout.html' %}
+
+{% block title %}Adicionar Nova Album{% endblock %}
+
+{% block content %}
+<h2>Adicionar Novo Album</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+</form>
+<a href="{% url 'bandas:index' %}">Cancelar</a>
+{% endblock %}

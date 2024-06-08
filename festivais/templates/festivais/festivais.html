@@ -1,0 +1,34 @@
+{% extends 'festivais/layout.html' %}
+
+{% block content %}
+
+  <h1></h1>
+
+  <div>
+
+    {% for localizacao in localizacoes %}
+
+      <h2>{{ localizacao.nome }}</h2>
+
+      <ul>
+
+        {% for festival in localizacao.festival_set.all %}
+
+          <li>
+
+            <a href="{% url 'festivais:festival_detail' festival.id %}">{{ festival.nome }}</a> - {% for banda in festival.bandas.all %} {{ banda.nome }},
+
+              {% endfor %}
+
+          </li>
+
+        {% endfor %}
+
+      </ul>
+
+    {% endfor %}
+
+  </div>
+
+{% endblock %}
+

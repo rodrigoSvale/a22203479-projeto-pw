@@ -1,0 +1,14 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Authors List</h1>
+    <ul>
+        {% for author in authors %}
+        <li><a href="{% url 'artigos:author-detail' author_id=author.id %}">{{ author.user.username }}</a></li>
+        {% endfor %}
+        <a href="{% url 'autenticacao:login' %}">
+      <button>fazer login</button>
+    </ul>
+</div>
+{% endblock %}

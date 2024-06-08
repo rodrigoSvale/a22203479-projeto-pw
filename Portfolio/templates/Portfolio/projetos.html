@@ -1,0 +1,44 @@
+<!-- templates/Portfolio/projetos.html -->
+{% extends 'Portfolio/layout.html' %}
+
+{% block title %}Projetos{% endblock %}
+
+{% block content %}
+<section class="projects">
+    <div class="container">
+        <h2>Os Meus Projetos</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Aplicação noobsite</h3>
+                <p>Primeira aplicação web que fiz na vida</p>
+                <a href="{% url 'noobsite:index_view' %}">Ver Projeto</a>
+            </div>
+            <div class="project-item">
+                <h3>Aplicação pwsite</h3>
+                <p>Descrição breve da aplicação Django 2.</p>
+                <a href="{% url 'pwsite:index' %}">Ver Projeto</a>
+            </div>
+            <div class="project-item">
+                <h3>Aplicação festivais </h3>
+                <p>Aplicação feita no mini-teste 2.</p>
+                <a href="{% url 'festivais:index' %}">Ver Projeto</a>
+            </div>
+            <div class="project-item">
+                <h3>Aplicação curso </h3>
+                <p>Descrição breve da aplicação Django 3.</p>
+                <a href="{% url 'cursos:index' %}">Ver Projeto</a>
+            </div>
+            <div class="project-item">
+                <h3>Aplicação bandas </h3>
+                <p>Descrição breve da aplicação Django 4.</p>
+                <a href="{% url 'bandas:index' %}">Ver Projeto</a>
+            </div>
+            <div class="project-item">
+                <h3>Aplicação meteo </h3>
+                <p>Descrição breve da aplicação Django 5.</p>
+                <a href="{% url 'meteo:index' %}">Ver Projeto</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

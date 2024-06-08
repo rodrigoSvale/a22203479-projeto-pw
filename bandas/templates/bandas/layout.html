@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bandas{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bandas/estilos.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d1319edfb.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: lightgray;
+        }
+        {% block style %}{% endblock %}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Bandas</h1>
+            <nav id="nav">
+                <ul class="menu">
+                    <a href="{% url 'autenticacao:login' %}">
+                    <button>fazer login</button>
+                    <li><a href="{% url 'bandas:index' %}">Home</a></li>
+                    <li><a href="{% url 'bandas:list' %}">Bandas</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-content">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer class="footer" id="footer">
+            &copy; 2024 Bandas
+        </footer>
+    </div>
+</body>
+</html>

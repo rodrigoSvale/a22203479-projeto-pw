@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>{{ projeto.disciplina.nome }}: Projeto</h1>
+  <p><strong>Descrição:</strong> {{ projeto.descricao }}</p>
+  <p><strong>Conceitos Aplicados:</strong> {{ projeto.conceitos_aplicados }}</p>
+  <p><strong>Tecnologias Usadas:</strong> {{ projeto.tecnologias_usadas }}</p>
+  <div>
+    <h2>Linguagens de Programação</h2>
+    {% for linguagem in projeto.linguagens.all %}
+      <p>{{ linguagem.nome }} - versão {{ linguagem.versao }}</p>
+    {% endfor %}
+  </div>
+  <div>
+    <h2>Imagem do Projeto</h2>
+    <img src="{{ projeto.imagem.url }}" alt="Imagem do Projeto">
+  </div>
+  <p><a href="{{ projeto.link_video }}">Link do Vídeo</a></p>
+  {% if projeto.link_github %}
+    <p><a href="{{ projeto.link_github }}">Link do GitHub</a></p>
+  {% endif %}
+{% endblock %}

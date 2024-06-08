@@ -1,0 +1,25 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Detalhes da Avaliação</h1>
+    <div class="rating-details">
+        <p><strong>Score:</strong> {{ rating.score }}</p>
+        <p><strong>Artigo Avaliado:</strong> {{ rating.article.title }}</p>
+        <p><strong>Autor da Avaliação:</strong> {{ rating.autor.username }}</p>
+        <p><strong>Data da Avaliação:</strong> {{ rating.article.data_Postada|date:"d M Y H:i" }}</p>
+    </div>
+
+    <hr>
+    <h2>Artigo Relacionado:</h2>
+    <div class="article-content">
+        <h3>{{ rating.article.title }}</h3>
+        <p>{{ rating.article.corpo }}</p>
+        <p><strong>Data de Publicação:</strong> {{ rating.article.data_Postada|date:"d M Y H:i" }}</p>
+        <p><strong>Última Modificação:</strong> {{ rating.article.ultima_modificacao|date:"d M Y H:i" }}</p>
+        <p><strong>Total de Likes:</strong> {{ rating.article.likes }}</p>
+    </div>
+
+    <a href="{% url 'artigos:article-detail' rating.article.id %}">Ver mais sobre este artigo</a>
+</div>
+{% endblock %}

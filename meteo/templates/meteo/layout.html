@@ -1,0 +1,31 @@
+<!-- templates/meteo/layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MetPortugal{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'meteo/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="{% static 'meteo/logo.png' %}" alt="Logo" class="logo">
+            <div class="navbar-title">MetPortugal</div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'meteo:index' %}">Início</a></li>
+                    <li><a href="{% url 'meteo:cities' %}">Cidades</a></li>
+                    <li><a href="{% url 'meteo:api_cities' %}">APIs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hero">
+        {% block hero %}{% endblock %}
+    </div>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

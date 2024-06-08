@@ -1,0 +1,62 @@
+[
+    {
+        "nome": "Imagine Dragons",
+        "genero": "Alternative Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano_criacao": 2008
+    },
+    {
+        "nome": "Coldplay",
+        "genero": "Alternative Rock",
+        "nacionalidade": "Reino Unido",
+        "ano_criacao": 1996
+    },
+    {
+        "nome": "Maroon 5",
+        "genero": "Pop Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano_criacao": 1994
+    },
+    {
+        "nome": "Arctic Monkeys",
+        "genero": "Indie Rock",
+        "nacionalidade": "Reino Unido",
+        "ano_criacao": 2002
+    },
+    {
+        "nome": "The Killers",
+        "genero": "Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano_criacao": 2001
+    },
+    {
+        "nome": "Paramore",
+        "genero": "Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano_criacao": 2004
+    },
+    {
+        "nome": "Mumford & Sons",
+        "genero": "Folk Rock",
+        "nacionalidade": "Reino Unido",
+        "ano_criacao": 2007
+    },
+    {
+        "nome": "Twenty One Pilots",
+        "genero": "Alternative Hip Hop",
+        "nacionalidade": "Estados Unidos",
+        "ano_criacao": 2009
+    },
+    {
+        "nome": "Panic! At The Disco",
+        "genero": "Pop Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano_criacao": 2004
+    },
+    {
+        "nome": "Florence and the Machine",
+        "genero": "Indie Rock",
+        "nacionalidade": "Reino Unido",
+        "ano_criacao": 2007
+    }
+]

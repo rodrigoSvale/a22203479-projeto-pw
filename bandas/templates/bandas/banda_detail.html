@@ -1,0 +1,27 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <nav>
+        <a href="{% url 'bandas:index' %}">Home</a>
+    </nav>
+    <h1>{{ banda.nome }}</h1>
+    <p><strong>Nacionalidade:</strong> {{ banda.nacionalidade }}</p>
+    <p><strong>Ano de Formação:</strong> {{ banda.ano }}</p>
+    <p><strong>Gênero:</strong> {{ banda.genero }}</p>
+
+    {% if banda.biografia %}
+        <h3>Biografia:</h3>
+        <p class="biografia">{{ banda.biografia }}</p>
+    {% endif %}
+
+    <h2>Álbuns</h2>
+    <ul>
+    {% for album in banda.albuns.all %}
+        <li>
+            <a href="{% url 'bandas:album' album_id=album.id %}">{{ album.titulo }}</a> - Lançado em {{ album.ano }}
+        </li>
+    {% empty %}
+        <li>Esta Banda não tem álbuns.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+<title>Disciplinas</title>
+<h1><header>Disciplinas</header></h1>
+
+{% block content %}
+
+<header>
+    <a href="{% url 'cursos:index' %}">Descrição Curso</a>
+</header>
+
+<h3>{{ Disciplinas }}</h3>
+
+{% for disciplina in disciplinas %}
+    <li>
+        <a href="{% url 'cursos:disciplina' disciplina.id %}">{{ disciplina.nome }}</a>
+    </li>
+{% endfor %}
+
+{% endblock %}

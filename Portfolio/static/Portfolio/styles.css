@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'nav main aside'
+        'footer footer footer';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header */
+header.hero {
+    grid-area: header;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Nav */
+nav {
+    grid-area: nav;
+    background: #333;
+    font-size: 25px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Aside */
+.aside {
+    grid-area: aside;
+    background: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#clock {
+    font-size: 18px; /* Tamanho da fonte do relógio */
+    color: white; /* Cor do texto do relógio */
+    font-weight: bold; /* Define o texto em negrito */
+    text-align: left; /* Centraliza o texto */
+}
+
+/* Main Content */
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    background: #333;
+    text-align: center; /* Centraliza o texto */
+    color: white;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode .main-content {
+    background: white;
+    color: black; /* Texto principal branco */
+}
+
+body.dark-mode nav {
+    background: white;
+    color: black;
+}
+
+body.dark-mode nav ul li a {
+    color: black;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #ff6347;
+}
+
+body.dark-mode .aside {
+    background: white;
+    color: black; /* Texto na esquerda continua branco */
+}
+
+body.dark-mode footer {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: black; /* Cor do ícone no modo escuro */
+}
+
+/* Cor do ícone no modo normal */
+#dark-mode-toggle {
+    color: white; /* Cor do ícone no modo normal */
+}
+#dark-mode-toggle:hover {
+    color: #ff6347;
+    cursor:pointer;
+}
+.dark-mode #dark-mode-toggle:hover {
+    color: #ff6347;
+    cursor:pointer;
+}
+
+/* Relógio */
+body.dark-mode #clock {
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'nav'
+            'main'
+            'aside'
+            'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}

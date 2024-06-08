@@ -1,0 +1,18 @@
+<title>{{ disciplina.nome }}</title>
+<h1>{{ disciplina.nome }}</h1>
+
+{% block content %}
+
+<header>
+    <a href="{% url 'cursos:index' %}">Descrição Curso</a>
+</header>
+
+<h3>Detalhes de {{ disciplina.nome }}</h3>
+
+<p>Ano: {{ disciplina.ano }}º</p>
+<p>Semestre: {{ disciplina.semestre }}</p>
+<p>Ects: {{ disciplina.ects }}</p>
+<p>Curricular Unit Readable Code: {{ disciplina.curricularUnitReadableCode }}</p>
+<p>Área Científica: {{ disciplina.area_cientifica.nome }}</p>
+
+{% endblock %}

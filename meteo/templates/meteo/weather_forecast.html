@@ -1,0 +1,33 @@
+{% extends 'meteo/layout.html' %}
+
+{% block title %}Previsão do Tempo para {{ selected_city }}{% endblock %}
+
+{% block content %}
+<h1>Previsão do Tempo para {{ selected_city }}</h1>
+<form method="get">
+    <label for="city">Escolha a cidade:</label>
+    <select name="city" id="city" onchange="this.form.submit()">
+        {% for city in cities %}
+            <option value="{{ city.local }}" {% if city.local == selected_city %}selected{% endif %}>{{ city.local }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Ver Previsão</button>
+</form>
+<hr>
+{% if forecast %}
+    <div class="forecast-container">
+        {% for day in forecast %}
+            <div class="forecast-item">
+                <h3>{{ day.date }}</h3>
+                <p>Min Temperatura: {{ day.min_temp }}°C</p>
+                <p>Max Temperatura: {{ day.max_temp }}°C</p>
+                <p>Descrição: {{ day.weather_description }}</p>
+                <p>Precipitação: {{ day.precipitation }}%</p>
+                <img src="{{ day.icon_url }}" alt="Weather Icon">
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Não foi possível obter a previsão do tempo.</p>
+{% endif %}
+{% endblock %}

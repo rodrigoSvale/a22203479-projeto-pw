@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Cursos</title>
+        <style>
+            body {
+                background: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Cursos</h1>
+        </header>
+
+        <main>
+            <h2>Curso de Engenharia Informática</h2>
+    <ul>
+    {% for curso in cursos %}
+        <li>
+            <h3><a href = "{% url 'cursos:disciplinas' curso.id %}">LEI</a></h3>
+            <p>{{ curso.apresentacao }}</p>
+            <p>{{ curso.objetivos }}</p>
+            <p>{{ curso.competencias }}</p>
+        </li>
+    {% endfor %}
+    <a href="{% url 'autenticacao:login' %}">
+      <button>fazer login</button>
+</ul>
+
+
+
+        </main>
+
+        <footer>
+                  <p>Universidade Lusófona</p>
+        </footer>
+    </body>
+</html>

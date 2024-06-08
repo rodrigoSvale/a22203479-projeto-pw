@@ -1,0 +1,33 @@
+<!-- templates/meteo/cities.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cidades Disponíveis</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'meteo/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="{% static 'meteo/logo.png' %}" alt="Logo" class="logo">
+            <div class="navbar-title">MetPortugal</div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'meteo:index' %}">Início</a></li>
+                    <li><a href="{% url 'meteo:cities' %}">Cidades</a></li>
+                    <li><a href="{% url 'meteo:api_cities' %}">APIs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Lista de Cidades</h2>
+        <ul>
+            {% for city in cities %}
+                <li><a href="{% url 'meteo:city_weather_today' city.globalIdLocal %}">{{ city.local }}</a></li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

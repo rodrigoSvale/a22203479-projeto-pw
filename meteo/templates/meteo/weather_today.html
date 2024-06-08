@@ -1,0 +1,16 @@
+{% extends 'meteo/layout.html' %}
+
+{% block title %}Tempo em {{ city }}{% endblock %}
+
+{% block content %}
+<h1>Tempo em {{ city }}</h1>
+{% if error %}
+    <p>{{ error }}</p>
+{% else %}
+    <p>Min Temperatura: {{ min_temp }}°C</p>
+    <p>Max Temperatura: {{ max_temp }}°C</p>
+    <p>Data: {{ date }}</p>
+    <p>Descrição: {{ weather_description }}</p>
+    <img src="{{ icon_url }}" alt="Weather Icon">
+{% endif %}
+{% endblock %}
