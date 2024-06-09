@@ -14,3 +14,5 @@ def contacto(request):
 
 def projetos(request):
     return render(request, 'Portfolio/projetos.html')
+
+
