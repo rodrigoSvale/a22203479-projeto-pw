@@ -2,7 +2,12 @@
 <h1>{{ disciplina.nome }}</h1>
 
 {% block content %}
-
+<style>
+    body {
+        text-align:center;
+    }
+</style>
+<body>
 <header>
     <a href="{% url 'cursos:index' %}">Descrição Curso</a>
 </header>
@@ -14,5 +19,6 @@
 <p>Ects: {{ disciplina.ects }}</p>
 <p>Curricular Unit Readable Code: {{ disciplina.curricularUnitReadableCode }}</p>
 <p>Área Científica: {{ disciplina.area_cientifica.nome }}</p>
+</body>
 
 {% endblock %}

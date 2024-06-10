@@ -2,7 +2,11 @@
 <h1><header>Disciplinas</header></h1>
 
 {% block content %}
-
+<style>
+    body {
+        text-align:center;
+    }
+</style>
 <header>
     <a href="{% url 'cursos:index' %}">Descrição Curso</a>
 </header>
@@ -10,9 +14,9 @@
 <h3>{{ Disciplinas }}</h3>
 
 {% for disciplina in disciplinas %}
-    <li>
+    <p>
         <a href="{% url 'cursos:disciplina' disciplina.id %}">{{ disciplina.nome }}</a>
-    </li>
+    <p>
 {% endfor %}
 
 {% endblock %}
