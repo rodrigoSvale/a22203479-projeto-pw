@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'meteo',
     'autenticacao',
     'Portfolio',
+    'testeCss',
 ]
 
 MIDDLEWARE = [

@@ -12,6 +12,7 @@ class Banda(models.Model):
         return f'{self.nome}'
 
 class Album(models.Model):
+
     banda = models.ForeignKey(Banda, on_delete=models.CASCADE, related_name='albuns', null=True)
     titulo = models.CharField(max_length=100)
     ano = models.IntegerField()

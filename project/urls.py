@@ -29,4 +29,5 @@ urlpatterns = [
     path('meteo/', include('meteo.urls')),
     path('autenticacao/', include('autenticacao.urls')),
     path('', include('Portfolio.urls')),
+    path('testeCss/', include('testeCss.urls')),
 ]

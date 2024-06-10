@@ -1,0 +1,47 @@
+.caixa {
+    height:500px;
+    width:500px;
+    display:grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'header header header'
+    'nav main aside'
+    'footer footer footer';
+    background:orange;
+}
+.pequena1 {
+    grid-area:header;
+    background:blue;
+    color:pink;
+    text-align:center;
+    justify-content:center;
+}
+.pequena2 {
+    grid-area:footer;
+    background:green;
+    color:cyan;
+    text-align:center;
+    justify-content:center;
+}
+.pequena3 {
+    grid-area:main;
+    background:red;
+    color:black;
+    text-align:center;
+    justify-content:center;
+}
+.pequena4 {
+    grid-area:nav;
+    background:cyan;
+    color:pink;
+    text-align:center;
+    justify-content:center;
+}
+.pequena5 {
+    grid-area:aside;
+    background:black;
+    color:pink;
+    text-align:center;
+    justify-content:center;
+}
